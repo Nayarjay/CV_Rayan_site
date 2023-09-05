@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="navbar-container" style="display: flex;">
+        <img src="image/Dark Blue Modern Professional Technology Company Logo (1).png" style="justify-content: start;">
+        <ul class="navbar" style="list-style: none; display: flex; padding: 0;">
+            <li style="display: inline-block;"><a class="arrow"><i></i>Home</a></li>
+            <li style="display: inline-block;"><a class="arrow"><i></i>Portfolio</a></li>
+            <li style="display: inline-block;"><a class="arrow"><i></i>GameDev</a></li>
+            <li style="display: inline-block;"><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
+            <li style="display: inline-block;"><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Experience</a></li>
+        </ul>
+    </div>
+    
+    
+</body>
+
+<style>
+    @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        font-family: 'Press Start 2P';
+        font-size: 1rem;
+        line-height: 2;
+        height: 100%;
+        background: linear-gradient(to bottom, rgb(37, 162, 235), rgb(173, 216, 230));
+        text-transform: uppercase;
+    }
+
+    a {
+        text-decoration: none;
+        color: #9e74ff;
+    }
+
+    li {
+        color: #4FAF44;
+        margin-right: 10px; /* Espacement entre les éléments */
+    }
+
+    .arrow i {
+        display: none;
+     
+    }
+
+    .arrow {
+        position: relative;
+        display: block;
+        color: #F6EB14;
+    }
+
+    .arrow:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .arrow:hover i { 
+        display: block;
+        position: absolute;
+        top: 0.50em; 
+        left: -6em;
+    }
+
+    .navbar-container {
+        display: flex ;
+        justify-content: flex-end; /* Alignement à droite */
+        align-items: center;
+        margin-top: 2%;
+        margin-right: 2%;
+    }
+    .navbar{
+        justify-content: flex-end; /* Alignement à droite */
+    }
+    
+</style>
+</html>
