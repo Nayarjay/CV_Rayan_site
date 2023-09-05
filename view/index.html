@@ -4,83 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Press Start 2P', sans-serif;
+            font-size: 1rem;
+            line-height: 2;
+            height: 100%;
+            background: linear-gradient(to bottom, rgb(37, 162, 235), rgb(173, 216, 230));
+            text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
+            color: #9e74ff;
+        }
+
+        li {
+            color: #4FAF44;
+            margin-right: 10px; /* Espacement entre les éléments */
+        }
+
+        .arrow i {
+            display: none;
+        }
+
+        .arrow {
+            position: relative;
+            display: block;
+            color: #F6EB14;
+        }
+
+        .arrow:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .arrow:hover i { 
+            display: block;
+            position: absolute;
+            top: 0.50em; 
+            left: -6em;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: flex-end; /* Alignement à droite */
+            align-items: center;
+            margin-top: 2%;
+            margin-right: 2%;
+        }
+
+        .navbar {
+            justify-content: flex-end; /* Alignement à droite */
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        .flip-card {
+            width: 200px; /* Largeur de la carte */
+            height: 200px; /* Hauteur de la carte */
+            perspective: 1000px; /* Perspective pour l'effet 3D */
+            border-radius: 5%;
+            margin-top: 20px; /* Espacement en haut */
+        }
+
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s; /* Transition pour l'effet de retournement */
+            transform-style: preserve-3d; /* Permet de conserver la perspective */
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg); /* Effectue la rotation au survol */
+        }
+
+        .flip-card-front, .flip-card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden; /* Cache la face arrière de la carte */
+        }
+
+        .flip-card-front {
+            background-image: url('image/Image1.jpg'); /* Image avant */
+            background-size: cover;
+        }
+
+        .flip-card-back {
+            background-image: url('https://yt3.googleusercontent.com/9XmuxL_LL7CxAOOlbBgTnJIo2uHpoLKHhWzlPt7O49ULQmvBSJlxk1RpX3pJ8jkRBkD6p9BIRg=s900-c-k-c0x00ffffff-no-rj'); /* Image arrière (LinkedIn) */
+            background-size: cover;
+            transform: rotateY(180deg); /* Rotation pour cacher l'image arrière au départ */
+        }
+    </style>
 </head>
 <body>
+    <div>
+        <div style="display: flex; float: left; margin-top: -2%;">
+            <img src="image/house (1).png" style="justify-content: center;" width="100" height="100">
+        </div>
 
-    <div class="navbar-container" style="display: flex;">
-        <img src="image/Dark Blue Modern Professional Technology Company Logo (1).png" style="justify-content: start;">
-        <ul class="navbar" style="list-style: none; display: flex; padding: 0;">
-            <li style="display: inline-block;"><a class="arrow"><i></i>Home</a></li>
-            <li style="display: inline-block;"><a class="arrow"><i></i>Portfolio</a></li>
-            <li style="display: inline-block;"><a class="arrow"><i></i>GameDev</a></li>
-            <li style="display: inline-block;"><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
-            <li style="display: inline-block;"><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Experience</a></li>
-        </ul>
+        <div class="navbar-container">
+            <ul class="navbar">
+                <li><a class="arrow"><i></i>Home</a></li>
+                <li><a class="arrow"><i></i>Portfolio</a></li>
+                <li><a class="arrow"><i></i>GameDev</a></li>
+                <li><a class="arrow"><i></i>Contact</a></li>
+                <li><a class="arrow"><i></i>Experience</a></li>
+            </ul>
+        </div>
     </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 5%;">
+        <ul>
+
+
+            <h1 style="margin-left: 25%;">Je me Presente ...</h1>
+           
+            <div style="display: flex;" >
+                <div class="flip-card" >
+       
+                    <a href="https://www.linkedin.com/in/rayan-boudiba-23727b27a/" class="linkedin-link" target="_blank">
+               
     
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front"></div>
+                           
+                            <div class="flip-card-back"></div>
+                          
+                        </div>
+             
+                    </a>
+                    
+                </div>
+                <p style="margin-top: 3%;margin-left: 2%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, </p>
+            </div>
     
+
+        </ul>
+            
+
+   
+        
+    </div>
 </body>
-
-<style>
-    @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    html, body {
-        font-family: 'Press Start 2P';
-        font-size: 1rem;
-        line-height: 2;
-        height: 100%;
-        background: linear-gradient(to bottom, rgb(37, 162, 235), rgb(173, 216, 230));
-        text-transform: uppercase;
-    }
-
-    a {
-        text-decoration: none;
-        color: #9e74ff;
-    }
-
-    li {
-        color: #4FAF44;
-        margin-right: 10px; /* Espacement entre les éléments */
-    }
-
-    .arrow i {
-        display: none;
-     
-    }
-
-    .arrow {
-        position: relative;
-        display: block;
-        color: #F6EB14;
-    }
-
-    .arrow:hover {
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-
-    .arrow:hover i { 
-        display: block;
-        position: absolute;
-        top: 0.50em; 
-        left: -6em;
-    }
-
-    .navbar-container {
-        display: flex ;
-        justify-content: flex-end; /* Alignement à droite */
-        align-items: center;
-        margin-top: 2%;
-        margin-right: 2%;
-    }
-    .navbar{
-        justify-content: flex-end; /* Alignement à droite */
-    }
-    
-</style>
 </html>
