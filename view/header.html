@@ -1,0 +1,163 @@
+<header>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</header>
+<body>
+<div>
+    <div style="display: flex; float: left; margin-top: -2%;">
+       <a href="/"><img src="/view/image/house (1).png" style="justify-content: center;" width="100" height="100" class="home"></a> 
+    </div>
+
+    <div class="navbar-container">
+        <ul class="navbar">
+
+            <li><a class="arrow" href="/portfolio" ><i></i>Portfolio</a></li>
+            <li><a class="arrow" href="/gamedev"><i></i>GameDev</a></li>
+            <li><a class="arrow" href="/contact"><i></i>Contact</a></li>
+            <li><a class="arrow" href="/experience"><i></i>Experience</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<style>
+
+
+    html, body {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 1rem;
+        line-height: 2; 
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /*background-image: url('img/background.jpeg');*/
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2ab; /* Gris clair */
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #9e74ff;
+    }
+
+    li {
+        color: #4FAF44;
+        margin-right: 10px; /* Espacement entre les éléments */
+    }
+
+    .arrow i {
+        display: none;
+    }
+
+    .arrow {
+        position: relative;
+        display: block;
+        color: #EE3B15;
+    }
+
+    .arrow:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .arrow:hover i { 
+        display: block;
+        position: absolute;
+        top: 0.50em; 
+        left: -6em;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: flex-end; /* Alignement à droite */
+        align-items: center;
+        margin-top: 2%;
+        margin-right: 2%;
+    }
+
+    .navbar {
+        justify-content: flex-end; /* Alignement à droite */
+        list-style: none;
+        display: flex;
+        padding: 0;
+    }
+
+    .flip-card {
+        width: 200px; /* Largeur de la carte */
+        height: 200px; /* Hauteur de la carte */
+        perspective: 1000px; /* Perspective pour l'effet 3D */
+        border-radius: 100px;
+        margin-top: 20px; /* Espacement en haut */
+   
+    }
+
+    .flip-card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s; /* Transition pour l'effet de retournement */
+        transform-style: preserve-3d; /* Permet de conserver la perspective */
+        border-radius: 100px;
+   
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg); /* Effectue la rotation au survol */
+        border-radius: 100px;
+       
+    }
+
+    .flip-card-front, .flip-card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden; /* Cache la face arrière de la carte */
+        border-radius: 100px;
+        border: 1px solid black; /* 1 pixel de large, solide et noir */
+    }
+
+    .flip-card-front {
+        background-image: url('img/Image1.jpg'); /* Image avant */
+        background-size: cover;
+        border-radius: 100px;
+        border: 1px solid black; /* 1 pixel de large, solide et noir */
+    }
+
+    .flip-card-back {
+        background-image: url('https://yt3.googleusercontent.com/9XmuxL_LL7CxAOOlbBgTnJIo2uHpoLKHhWzlPt7O49ULQmvBSJlxk1RpX3pJ8jkRBkD6p9BIRg=s900-c-k-c0x00ffffff-no-rj'); /* Image arrière (LinkedIn) */
+        background-size: cover;
+        transform: rotateY(180deg); /* Rotation pour cacher l'image arrière au départ */
+        border-radius: 100px;
+        border: 1px solid black; /* 1 pixel de large, solide et noir */
+    }
+
+    .home {
+        position: relative;
+       
+    }
+
+    .home:hover {
+        content: ""; /* Ajoutez du contenu au pseudo-élément */
+       /* position: absolute;  Position absolue par rapport à l'élément parent */
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond noire avec une opacité de 0,5 pour l'overlay */
+        border-radius: 50%; /* Pour créer un cercle */
+        z-index: 1; /* Assurez-vous que l'overlay est au-dessus de l'image */
+    }
+        
+    /*progress bar*/
+
+
+    
+
+
+</style>

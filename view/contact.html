@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{> header}} 
+
+
+    <div style="display: flex;justify-content: center;margin-top: 5%;">
+        <ul>
+            <h1 style="display: flex;justify-content: center;">Contactez moi</h1>
+            <form action="/addIdea" method="post">
+              
+                <ul>
+                    <label for="sujet">Sujet :</label>
+                    <input type="text" id="sujet" name="sujet" class="texte" required style="width: 600px; height: 50px;"><br><br>
+            
+                    <label for="message">Message :</label><br>
+                    <textarea id="message" name="message" rows="4" class="texte" required style="width: 600px; height: 120px;"></textarea><br><br>
+
+                    <label for="sujet">Votre email :</label>
+                    <input type="text" id="email" name="email" class="texte" required style="width: 600px; height: 50px;"><br><br>
+                  
+            
+                    <input type="submit" value="Envoyer"  style="margin-left: 45%;">
+
+                </ul>
+               
+            </form>
+        </ul>
+     
+
+    </div>
+
+
+</body>
+</html>
+<style> 
+
+
+.texte {
+    display: flex;
+    justify-content: center;
+    margin-left: 0%;
+}
+label{
+    display: flex;
+    justify-content: center;
+}
+
+</style>
